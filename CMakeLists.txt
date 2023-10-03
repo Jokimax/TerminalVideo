@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.12)
+project( TerminalVideoPlayer VERSION 1.0.0)
+find_package( OpenCV REQUIRED )
+find_package( Curses REQUIRED )
+add_executable( TerminalVideoPlayer main.cpp )
+target_link_libraries( TerminalVideoPlayer ${OpenCV_LIBS} ${CURSES_LIBRARY} )
